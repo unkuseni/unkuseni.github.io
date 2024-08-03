@@ -5,6 +5,14 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-desktop': "url('https://picsum.photos/2600/1080')",
+        hero: "url('https://picsum.photos/580/720')",
+      },
+      fontFamily: {
+        Inter: ["Inter", "sans-serif"],
+        Mont: ["Montreal", "sans-serif"],
+      },
       transitionProperty: {
         width: "width"
       },
