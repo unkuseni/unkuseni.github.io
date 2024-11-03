@@ -1,13 +1,16 @@
 
-import './App.css'
+import "./App.css";
+import Navbar from "./components/nav/nav";
+import MainSection from "./components/main/main-section";
 
 function App() {
 
-  return (
-    <>
-   <p className='text-3xl'>Hello, Under Construction</p>
-    </>
-  )
+	return (
+		<>
+			<Navbar title="unkuseni" />
+			<MainSection />
+		</>
+	);
 }
 
-export default App
+export default App;
