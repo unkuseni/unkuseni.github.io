@@ -1,5 +1,10 @@
 import Drawer from "../drawer/drawer"
 import Hero from "../hero/hero"
+import What from "../sections/what"
+import Why from "../sections/why"
+import Who from "../sections/who"
+import How from "../sections/how"
+import Connect from "../sections/connect"
 
 
 const MainSection = () => {
@@ -10,21 +15,13 @@ const MainSection = () => {
         className="overflow-auto w-screen flex-grow"
       
       >
-        <Hero />
+        <Hero/>
         <Drawer />
-        <div>
-          why 01
-        </div>
-        <div>
-          who 02
-        </div>
-        <div>
-          what 03
-        </div>
-        <div>
-          how 04
-        </div>
-        <div>connect</div>
+        <Why />
+        <Who />
+        <What />
+        <How />
+        <Connect />
       </div>
     </>
   )

@@ -7,7 +7,7 @@ function App() {
 
 	return (
 		<>
-			<Navbar title="unkuseni" />
+			<Navbar title="unkuseni's portfolio" />
 			<MainSection />
 		</>
 	);

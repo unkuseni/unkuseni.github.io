@@ -6,6 +6,7 @@ interface NavLinkProps {
 	digits?: string;
 	textNum?: string;
 	isOpen: boolean;
+	onClick?: () => void;
 }
 
 const NavLink: React.FC<NavLinkProps> = ({
@@ -13,6 +14,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 	digits = "000",
 	textNum = "zero",
 	isOpen,
+	onClick = () => {},
 }) => {
 	const [animate, setAnimate] = useState(false);
 
@@ -25,8 +27,8 @@ const NavLink: React.FC<NavLinkProps> = ({
 	}, [isOpen]);
 
 	return (
-		<div className='p-6 border-t border-white'>
-			<div className='w-full uppercase flex justify-between'>
+		<div className='p-6 border-t border-white' onClick={onClick}>
+			<div className='w-full uppercase flex justify-between items-center'>
 				<span>chapter</span>
 				<span>{digits}</span>
 				<span>{textNum}</span>
