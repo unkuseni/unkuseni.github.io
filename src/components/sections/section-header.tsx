@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const SectionHeader = ({ digits = "000", textNum = "zero" }) => {
 	return (
