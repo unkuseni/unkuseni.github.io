@@ -10,7 +10,7 @@ const Navbar: React.FC<NavbarProps> = ({ title = "underConstruction" }) => {
 	return (
 		<>
 			<header className={`w-full bg-transparent absolute top-0 z-20`}>
-				<nav className='container'>
+				<nav className='w-full'>
 					<div id='nav-title' className={`p-5 relative z-20`}>
 						<div className='flex justify-between w-full items-center'>
 							<button

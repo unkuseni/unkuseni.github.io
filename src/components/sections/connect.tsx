@@ -29,6 +29,12 @@ const Connect = () => {
 						</span>
 					))}
 				</p>
+				<p className='text-3xl leading-10 font-editorial italic '>
+					<span className='font-editorial italic capitalize'>hey! </span>I'm{" "}
+					<span className='capitalize'>olaseni,</span> a 24-year-old software
+					developer. <span className='capitalize'>currently</span> based in{" "}
+					<span className='capitalize font-caslon'>Lagos, Nigeria</span>
+				</p>
 			</section>
 		</>
 	);

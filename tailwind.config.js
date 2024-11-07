@@ -7,6 +7,8 @@ export default {
 			fontFamily: {
 				inter: ["Inter", "sans-serif"],
 				caslon: ["Caslon", "sans-serif"],
+				playfair: ["Playfair Display", "serif"],
+				editorial: ["Editorial", "serif"],
 			},
 			borderRadius: {
 				lg: "var(--radius)",
