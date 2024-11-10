@@ -15,6 +15,9 @@ export default {
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",
 			},
+			backgroundImage: {
+			'hero-pattern': "url('/bkg.png')",
+			},
 			colors: {},
 			animation: {
 				fadeIn: "fade-in 0.6s ease-in-out",

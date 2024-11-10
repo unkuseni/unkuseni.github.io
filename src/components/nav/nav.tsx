@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ title = "underConstruction" }) => {
 						</div>
 					</div>
 					<div
-						className={`bg-blue-500 absolute top-0 w-screen h-auto pt-32 transition-transform duration-700 ${
+						className={`bg-blue-500 absolute top-0 h-screen overflow-auto w-screen pt-32 transition-all duration-700 ${
 							open ? "translate-x-0" : "-translate-x-[101%]"
 						}`}
 					>

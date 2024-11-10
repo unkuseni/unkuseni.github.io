@@ -4,7 +4,7 @@ const Hero = () => {
 	return (
 		<>
 			<div
-				className={`relative flex flex-col justify-between flex-nowrap min-h-[100vh] transition-opacity duration-500 bg-black p-12 py-24 overflow-hidden `}
+				className={`relative flex flex-col justify-between flex-nowrap min-h-[100vh] transition-opacity duration-500 bg-hero-pattern p-12 py-24 overflow-hidden bg-cover bg-center`}
 			>
 				<h2 className='text-6xl uppercase font-bold animate-slide-down duration-700 '>
 					<span className='after:content-["."] block my-5'>build, launch</span>

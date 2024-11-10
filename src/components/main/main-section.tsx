@@ -16,7 +16,7 @@ const MainSection = () => {
       
       >
         <Hero/>
-        <Drawer />
+        <Drawer className="bg-black"/>
         <Why />
         <Who />
         <What />
