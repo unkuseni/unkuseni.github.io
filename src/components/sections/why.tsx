@@ -4,7 +4,7 @@ import { useInView } from "@/hooks/useInView";
 
 const Why = () => {
 	const [sectionRef, isInView] = useInView({
-		threshold: 0.3, // Trigger when 20% of element is visible
+		threshold: 0.2, // Trigger when 20% of element is visible
 	});
 
 	const title = "why";
@@ -13,7 +13,7 @@ const Why = () => {
 		<>
 			<section
 				ref={sectionRef as React.RefObject<HTMLElement>}
-				className='bg-amber-100 text-green-700'
+				className='bg-amber-100 text-green-700 pt-5'
 				id='why'
 			>
 				<div className='p-6'>

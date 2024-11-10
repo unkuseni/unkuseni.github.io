@@ -4,14 +4,14 @@ import { useInView } from "@/hooks/useInView";
 
 const Who = () => {
 	const [sectionRef, isInView] = useInView({
-		threshold: 0.1, // Trigger when 20% of element is visible
+		threshold: 0.05, // Trigger when 20% of element is visible
 	});
 
 	const title = "who";
 	return (
 		<>
 			<section
-				className='bg-blue-500 text-white'
+				className='bg-blue-500 text-white pt-5'
 				ref={sectionRef as React.RefObject<HTMLElement>}
 				id='who'
 			>
