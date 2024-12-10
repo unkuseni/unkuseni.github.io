@@ -1,7 +1,6 @@
 import React from "react";
 import SectionHeader from "./section-header";
 import { useInView } from "@/hooks/useInView";
-import { Button } from "../ui/button";
 
 const Connect = () => {
 	const [sectionRef, isInView] = useInView({

@@ -3,9 +3,45 @@ import NavLink from "./nav-link";
 
 interface NavbarProps {
 	title: string;
+	navLinks: [
+		{
+			title: string;
+			digits: string;
+			textNum: string;
+		}
+	];
 }
 
-const Navbar: React.FC<NavbarProps> = ({ title = "underConstruction" }) => {
+const Navbar: React.FC<NavbarProps> = ({
+	title = "underConstruction",
+	navLinks = [
+		{
+			title: "why",
+			digits: "001",
+			textNum: "one",
+		},
+		{
+			title: "who",
+			digits: "002",
+			textNum: "two",
+		},
+		{
+			title: "what",
+			digits: "003",
+			textNum: "three",
+		},
+		{
+			title: "how",
+			digits: "004",
+			textNum: "four",
+		},
+		{
+			title: "connect",
+			digits: "005",
+			textNum: "five",
+		},
+	],
+}) => {
 	const [open, setOpen] = useState(false);
 	return (
 		<>
@@ -34,41 +70,16 @@ const Navbar: React.FC<NavbarProps> = ({ title = "underConstruction" }) => {
 							open ? "translate-x-0" : "-translate-x-[101%]"
 						}`}
 					>
-						<NavLink
-							title={"why"}
-							digits='001'
-							textNum='one'
-							isOpen={open}
-							onClick={() => setOpen(false)}
-						/>
-						<NavLink
-							title={"who"}
-							digits='002'
-							textNum='two'
-							isOpen={open}
-							onClick={() => setOpen(false)}
-						/>
-						<NavLink
-							title='what'
-							digits='003'
-							textNum='three'
-							isOpen={open}
-							onClick={() => setOpen(false)}
-						/>
-						<NavLink
-							title='how'
-							digits='004'
-							textNum='four'
-							isOpen={open}
-							onClick={() => setOpen(false)}
-						/>
-						<NavLink
-							title='connect'
-							digits='005'
-							textNum='five'
-							isOpen={open}
-							onClick={() => setOpen(false)}
-						/>
+						{navLinks.map(({ title, digits, textNum }, index) => (
+							<NavLink
+								title={title}
+								digits={digits}
+								textNum={textNum}
+								isOpen={open}
+								onClick={() => setOpen(false)}
+								key={index}
+							/>
+						))}
 					</div>
 				</nav>
 			</header>
