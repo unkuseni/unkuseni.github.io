@@ -3,7 +3,7 @@ import NavLink from "./nav-link";
 
 interface NavbarProps {
 	title: string;
-	navLinks: [
+	navLinks?: [
 		{
 			title: string;
 			digits: string;
