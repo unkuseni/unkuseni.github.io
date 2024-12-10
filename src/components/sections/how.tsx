@@ -83,6 +83,41 @@ const How = () => {
 						scalability and performance.
 					</p>
 				</article>
+				<article className='p-6'>
+					<h2 className='text-2xl font-bold uppercase'>
+						<span className='text-sm'>01.</span> interaction
+					</h2>
+
+					<p className='font-editorial text-2xl mt-5 leading-10'>
+						I craft engaging digital experiences that put users first. Through
+						intuitive interactions and fluid animations, I transform static
+						designs into dynamic interfaces, guiding visitors effortlessly and
+						leaving lasting impressions that showcase my creative expertise.
+					</p>
+				</article>
+				<article className='p-6'>
+					<h2 className='text-2xl font-bold uppercase'>
+						<span className='text-sm'>02.</span> performance
+					</h2>
+
+					<p className='font-editorial text-2xl mt-5 leading-10'>
+						I prioritize lightning-fast, inclusive web experiences. By
+						optimizing load times and adhering to WCAG standards, I ensure my
+						sites are swift and accessible to all users, regardless of their
+						devices or abilities, without compromising on visual appeal.
+					</p>
+				</article>
+				<article className='p-6'>
+					<h2 className='text-2xl font-bold uppercase'>
+						<span className='text-sm'>03.</span> teamwork
+					</h2>
+
+					<p className='font-editorial text-2xl mt-5 leading-10'>
+						I'm a team player who loves working with others. I communicate well,
+						share what I know, and listen to different ideas. Together, we
+						create awesome websites that work great and make users happy.
+					</p>
+				</article>
 			</section>
 		</>
 	);

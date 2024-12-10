@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeader from "./section-header";
 import { useInView } from "@/hooks/useInView";
+import Carousel from "../carousel/carousel";
 
 const What = () => {
 	const [sectionRef, isInView] = useInView({
@@ -37,8 +38,8 @@ const What = () => {
 				</div>
 				<article className='p-6'>
 					<h2 className='text-xl font-bold uppercase'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-						velit.
+						From Curiosity to Creation: Crafting Order from Chaos Through
+						Chemistry and Code
 					</h2>
 					<p className='font-editorial text-2xl mt-5 leading-10'>
 						"All my life, curiosity and taking things apart has helped me foster
@@ -51,51 +52,21 @@ const What = () => {
 						forward. By combining my love for chemistry and coding, I aim to
 						create solutions that bring order to chaos."
 					</p>
-					<div className='bg-white'>
-						<img
-							src='https://picsum.photos/500/350'
-							alt=''
-							className={`mt-10 w-full h-auto max-w-full object-contain`}
-						/>
-					</div>
+				
 				</article>
-				<div className='bg-white'>
-					<img
-						src='https://picsum.photos/500/1000'
-						alt=''
-						className={`mt-24 w-full h-auto max-w-full object-contain`}
-					/>
-				</div>
+
 				<article className='p-6'>
-					<h2 className='text-xl font-bold uppercase'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-						velit.
-					</h2>
+					<h2 className='text-xl font-bold uppercase'>Works on Display</h2>
 					<p className='font-editorial text-2xl mt-5 leading-10'>
-						"All my life, curiosity and taking things apart has helped me foster
-						my creativity.
-						<br />
-						Software development is part of my ongoing journey of self-discovery
-						that helps me understand the famous phrase, ordo ab chao.
-						<br />
-						My passion for unraveling the mysteries of the universe drives me
-						forward. By combining my love for chemistry and coding, I aim to
-						create solutions that bring order to chaos."
+						Explore a collection of my software development projects that embody
+						my journey towards creating order from chaos. Each piece
+						demonstrates my commitment to solving complex problems through code.
+						From innovative applications to dynamic web experiences, these works
+						highlight my passion for crafting efficient and elegant solutions in
+						the realm of software development.
 					</p>
-					<div className='bg-white'>
-						<img
-							src='https://picsum.photos/500/350'
-							alt=''
-							className={`mt-10 w-full h-auto max-w-full object-contain`}
-						/>
-					</div>
 				</article>
-				<article className="p-6">
-					<h2 className="text-xl font-bold uppercase">Works on Display</h2>
-					<p className="font-editorial text-2xl mt-5 leading-10">
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur culpa fugit quia neque reiciendis est nihil cupiditate tempora libero natus, nam modi corrupti perspiciatis, provident alias, nemo ea adipisci? Culpa quo blanditiis illo dolores dolore animi assumenda, quidem amet molestiae!
-						</p>
-				</article>
+				<Carousel className='' />
 			</section>
 		</>
 	);
