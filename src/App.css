@@ -1,8 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@font-face {
+  font-family: 'Caslon';
+  src: url('/src/assets/fonts/Caslon.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/src/assets/fonts/playfair_italic.927ece91.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Editorial';
+  src: url('/src/assets/fonts/Editorial.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Editorial';
+  src: url('/src/assets/fonts/Editorial-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
 #root {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-image: url("/bkg.png");
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
 }

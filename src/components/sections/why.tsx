@@ -1,4 +1,4 @@
-import React from "react";
+
 import SectionHeader from "./section-header";
 import { useInView } from "@/hooks/useInView";
 
@@ -13,13 +13,13 @@ const Why = () => {
 		<>
 			<section
 				ref={sectionRef as React.RefObject<HTMLElement>}
-				className='bg-amber-100 text-green-700 pt-5'
+				className='max-sm:pt-5 sm:flex w-screen flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)]'
 				id='why'
 			>
 				<div className='p-6'>
 					<SectionHeader digits='001' textNum='one' />
 					<div className='overflow-hidden'>
-						<p className='mx-auto text-center text-[29vw] leading-[27vh] font-caslon font-bold uppercase'>
+						<p className='mx-auto text-center text-2xl leading-[2] font-caslon font-bold uppercase sm:flex'>
 							{title.split("").map((char, index) => (
 								<span
 									key={index}
@@ -28,7 +28,7 @@ const Why = () => {
 										transform: isInView ? "scaleY(1)" : "scaleY(0)",
 										opacity: isInView ? 1 : 0,
 										transformOrigin: "bottom",
-										transition: `transform 0.5s ease-out, opacity 0.5s ease-out`,
+										transition: 'transform 0.5s ease-out, opacity 0.5s ease-out',
 										transitionDelay: `${index * 100}ms`,
 									}}
 								>
@@ -57,7 +57,7 @@ const Why = () => {
 						<img
 							src='https://picsum.photos/500/350'
 							alt=''
-							className={`mt-10 w-full h-auto max-w-full object-contain transform transition-transform duration-500 ease-out ${
+							className={`mt-10 w-full h-auto max-w-full object-cover transform transition-transform duration-500 ease-out ${
 								isInView ? "scale-[1]" : "scale-[0]"
 							}`}
 						/>
@@ -65,14 +65,14 @@ const Why = () => {
 				</article>
 				<div className='bg-green-700'>
 					<img
-						src='https://picsum.photos/500/1000'
+						src='https://picsum.photos/1000/1000'
 						alt=''
-						className={`mt-24 w-full h-auto max-w-full object-contain transform transition-transform duration-500 ease-out ${
+						className={`max-sm:mt-24 w-full h-auto transform transition-transform duration-500 ease-out ${
 							isInView ? "scale-[1]" : "scale-[0]"
 						}`}
 					/>
 				</div>
-				<article className='p-6 mt-28'>
+				<article className='p-6 max-sm:mt-28'>
 					<h2 className='uppercase text-xl font-bold'>
 						a need to use leverage
 					</h2>

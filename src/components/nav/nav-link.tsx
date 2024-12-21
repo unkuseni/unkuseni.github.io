@@ -34,7 +34,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 				<span>{textNum}</span>
 			</div>
 			<a
-				className='mx-auto text-center text-[29vw] leading-[27vh] font-caslon font-bold uppercase'
+				className='mx-auto text-center text-[clamp(8rem,11rem,15rem)] leading-[27vh] font-caslon font-bold uppercase'
 				href={`#${title}`}
 			>
 				<p className='mx-auto'>

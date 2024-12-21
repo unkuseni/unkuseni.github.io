@@ -3,7 +3,53 @@ import SectionHeader from "./section-header";
 import { useInView } from "@/hooks/useInView";
 import Carousel from "../carousel/carousel";
 
-const What = () => {
+interface WhatProps {
+	worksOnDisplay?: 
+		{
+			title: string;
+			description: string;
+			image: string;
+			liveLink: string;
+			repoLink: string;
+		}[]
+	;
+}
+const What: React.FC<WhatProps> = ({
+	worksOnDisplay = [
+		{
+			title: "pet project",
+			description:
+				"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam mollitia deserunt eligendi perspiciatis, aliquid aliquam! Ullam ipsam impedit reiciendis sapiente.",
+			image: "https://picsum.photos/300/200",
+			liveLink: "https://unkuseni.me",
+			repoLink: "https://github.com/unkuseni",
+		},
+		{
+			title: "pet project",
+			description:
+				"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam mollitia deserunt eligendi perspiciatis, aliquid aliquam! Ullam ipsam impedit reiciendis sapiente.",
+			image: "https://picsum.photos/300/200",
+			liveLink: "https://unkuseni.me",
+			repoLink: "https://github.com/unkuseni",
+		},
+		{
+			title: "pet project",
+			description:
+				"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam mollitia deserunt eligendi perspiciatis, aliquid aliquam! Ullam ipsam impedit reiciendis sapiente.",
+			image: "https://picsum.photos/300/200",
+			liveLink: "https://unkuseni.me",
+			repoLink: "https://github.com/unkuseni",
+		},
+		{
+			title: "pet project",
+			description:
+				"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam mollitia deserunt eligendi perspiciatis, aliquid aliquam! Ullam ipsam impedit reiciendis sapiente.",
+			image: "https://picsum.photos/300/200",
+			liveLink: "https://unkuseni.me",
+			repoLink: "https://github.com/unkuseni",
+		},
+	],
+}) => {
 	const [sectionRef, isInView] = useInView({
 		threshold: 0.2, // Trigger when 20% of element is visible
 	});
@@ -52,7 +98,6 @@ const What = () => {
 						forward. By combining my love for chemistry and coding, I aim to
 						create solutions that bring order to chaos."
 					</p>
-				
 				</article>
 
 				<article className='p-6'>
@@ -66,7 +111,7 @@ const What = () => {
 						the realm of software development.
 					</p>
 				</article>
-				<Carousel className='' />
+				<Carousel className='' list={worksOnDisplay} />
 			</section>
 		</>
 	);
