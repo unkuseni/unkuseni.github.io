@@ -61,10 +61,10 @@ const Navbar: React.FC<NavbarProps> = ({
 							<h2 className="uppercase p-6 text-xl tracking-widest text-white font-semibold font-editorial italic opacity-0 sm:opacity-100 transition duration-700">
 								{title}
 							</h2>
-							<ul className="flex max-md:hidden w-2/5 items-center justify-between uppercase font-bold text-xl">
+							<ul className="flex max-md:hidden w-2/6 items-center justify-between uppercase font-bold text-xl ">
 								{navLinks.map(({ title, digits, textNum }) => {
 									return (
-										<li className="hover:backdrop-blur-lg hover:bg-[rgba(255,255,255,.05)] cursor-pointer hover:text-green-500 p-6 rounded-[100px]">
+										<li className="hover:backdrop-blur-lg hover:bg-[rgba(255,255,255,.05)] cursor-pointer hover:text-green-500 p-6 rounded-[100px] last:hidden">
 											<a href={`#${title}`}>{title}</a>
 										</li>
 									);

@@ -1,4 +1,3 @@
-import React from "react";
 import SectionHeader from "./section-header";
 import { useInView } from "@/hooks/useInView";
 
@@ -11,23 +10,24 @@ const Who = () => {
 	return (
 		<>
 			<section
-				className='bg-blue-500 text-white pt-5'
+				className='relative max-sm:pt-5 sm:flex flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)]'
 				ref={sectionRef as React.RefObject<HTMLElement>}
-				id='who'
+				id="who"
 			>
-				<div className='p-6'>
-					<SectionHeader digits='002' textNum='two' />
-					<div className='overflow-hidden'>
-						<p className='mx-auto text-center text-[29vw] leading-[27vh] font-caslon font-bold uppercase'>
+				<div className="p-6 md:min-w-[576px] md:flex md:flex-col md:justify-center md:items-center md:flex-shrink-0">
+					<SectionHeader digits="002" textNum="two" />
+					<div className="overflow-hidden">
+						<p className="mx-auto text-center text-[clamp(7rem,30vw,25rem)] leading-[2] font-caslon font-bold uppercase sm:flex">
 							{title.split("").map((char, index) => (
 								<span
 									key={index}
-									className='inline-block'
+									className="inline-block"
 									style={{
 										transform: isInView ? "scaleY(1)" : "scaleY(0)",
 										opacity: isInView ? 1 : 0,
 										transformOrigin: "bottom",
-										transition: `transform 0.5s ease-out, opacity 0.5s ease-out`,
+										transition:
+											"transform 0.5s ease-out, opacity 0.5s ease-out",
 										transitionDelay: `${index * 100}ms`,
 									}}
 								>
@@ -37,12 +37,11 @@ const Who = () => {
 						</p>
 					</div>
 				</div>
-				<article className='p-6'>
-
-					<h2 className='text-xl font-bold uppercase'>
+				<article className="p-6 md:w-[576px] md:flex md:flex-col md:items-center md:justify-center md:flex-shrink-0 md:h-[600px] md:relative md:self-center md:gap-5">
+					<h2 className="text-xl md:text-5xl font-bold uppercase md:tracking-wider">
 						adeoye olaseni, chemist, software developer and tinkerer
 					</h2>
-					<p className='font-editorial text-2xl mt-5 leading-10'>
+					<p className="font-editorial text-2xl md:text-5xl mt-5 leading-10">
 						"All my life, curiosity and taking things apart has helped me foster
 						my creativity.
 						<br />
@@ -54,57 +53,58 @@ const Who = () => {
 						create solutions that bring order to chaos."
 					</p>
 				</article>
-				<div className='bg-white'>
-					<img
-						src='https://picsum.photos/500/1000'
-						alt=''
-						className={`mt-24 w-full h-auto max-w-full object-contain`}
-					/>
-				</div>
-				<article className='p-6 mt-28'>
-					<h2 className='uppercase text-xl font-bold'>tinkerer</h2>
 
-					<p className='mt-10 leading-10 text-2xl'>
-						"Stay curious, stay foolish. In the intersection of chemistry and
-						code,{" "}
-						<span className='font-playfair italic'>
-							I've found that the most profound discoveries come from asking
-							'what if?'
-						</span>{" "}
-						Just as molecules combine to create something new, I blend
-						scientific thinking with software development to craft innovative
-						solutions.
-						<br />
-						My journey is fueled by an insatiable desire to explore the unknown.
-						<br />
-						Every challenge presents an opportunity to innovate and grow.
-						<br />
-						By pushing the boundaries of what's possible, I strive to make a
-						meaningful impact through technology."
-					</p>
-					<div className='bg-white'>
-						<img
-							src='https://picsum.photos/500/350'
-							alt=''
-							className={`mt-10 w-full h-auto max-w-full object-contain`}
-						/>
+				<img
+					src="/seni.jpeg"
+					alt=""
+					className={
+						"max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out flex-shrink-0 bg-white"
+					}
+				/>
+
+				<article className="p-6 max-sm:mt-28 md:flex md:gap-5">
+					<div className="md:self-start">
+						<h2 className="uppercase text-xl font-bold">tinkerer</h2>
+
+						<p className="mt-10 leading-10 text-2xl max-w-3xl">
+							"Stay curious, stay foolish. In the intersection of chemistry and
+							code,{" "}
+							<span className="font-playfair italic md:text-3xl">
+								I've found that the most profound discoveries come from asking
+								'what if?'
+							</span>{" "}
+							Just as molecules combine to create something new, I blend
+							scientific thinking with software development to craft innovative
+							solutions.
+							<br />
+							My journey is fueled by an insatiable desire to explore the
+							unknown.
+							<br />
+							Every challenge presents an opportunity to innovate and grow.
+							<br />
+							By pushing the boundaries of what's possible, I strive to make a
+							meaningful impact through technology."
+						</p>
 					</div>
-				</article>
-				<div className='bg-white'>
-					<img
-						src='https://picsum.photos/500/1000'
-						alt=''
-						className={`mt-24 w-full h-auto max-w-full object-contain`}
-					/>
-				</div>
-				<article className='p-6 mt-28'>
-					<h2 className='uppercase text-xl font-bold'>the chemist</h2>
 
-					<p className='mt-10 leading-10 text-2xl'>
+					<img
+						src="/tink.jpg"
+						alt=""
+						className={
+							"max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out bg-white flex-shrink-0 md:self-end"
+						}
+					/>
+				</article>
+
+
+				<article className="p-6 mt-28">
+					<h2 className="uppercase text-xl font-bold">the chemist</h2>
+
+					<p className="mt-10 leading-10 text-2xl">
 						"With a degree in Chemistry, my passion lies in exploring the
 						molecular foundations of the world around us.
 						<br />
-						<span className='font-playfair italic'>
+						<span className="font-playfair italic">
 							Unveiling the secrets of atoms and molecules has always inspired
 							me.
 						</span>
@@ -117,26 +117,14 @@ const Who = () => {
 						technology."
 					</p>
 
-					<div className='bg-white'>
-						<img
-							src='https://picsum.photos/500/350'
-							alt=''
-							className={`mt-10 w-full h-auto max-w-full object-contain `}
-						/>
-					</div>
+					<img
+						src="/engine.jpg"
+						alt=""
+						className={
+							"max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out bg-white flex-shrink-0"
+						}
+					/>
 				</article>
-				<div className='bg-white'>
-					<img
-						src='https://picsum.photos/400/1000'
-						alt=''
-						className={`mt-24 w-full h-auto max-w-full object-contain`}
-					/>
-					<img
-						src='https://picsum.photos/500/1000'
-						alt=''
-						className={`w-full h-auto max-w-full object-contain block `}
-					/>
-				</div>
 			</section>
 		</>
 	);

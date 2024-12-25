@@ -12,9 +12,9 @@ interface CarouselProps {
 }
 const Carousel: React.FC<CarouselProps> = ({ className = "", list = [] }) => {
 	return (
-		<div className={`relative p-6 ${className}`}>
+		<div className={`relative p-6 ${className} overflow-scroll`}>
 			<div className=''>
-				<ul className='flex my-6 gap-4 overflow-scroll scroll-smooth'>
+				<ul className='flex my-6 gap-4 md:gap-10 overflow-auto scroll-smooth md:flex-col md:max-w-2xl'>
 					{list.map(
 						({ title, description, image, liveLink, repoLink }, index) => (
 							<li className='min-w-[320px]' key={index}>

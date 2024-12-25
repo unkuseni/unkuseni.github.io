@@ -15,9 +15,6 @@ export default {
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",
 			},
-			backgroundImage: {
-			'hero-pattern': "url('/bkg.png')",
-			},
 			colors: {},
 			animation: {
 				fadeIn: "fade-in 0.6s ease-in-out",
@@ -25,9 +22,12 @@ export default {
 				"slide-down": "slide-down 0.6s ease-in-out",
 				"slide-up": "slide-up 0.6s ease-in-out",
 				marquee: "marquee 15s linear infinite",
+				"up-marquee": "up-marquee 30s linear infinite",
 				"scale-up": "scale-up 1.2s forwards",
 			},
-
+			translate: {
+				"-19.8p": "-19.8003%",
+			},
 			keyframes: {
 				"fade-in": {
 					from: { opacity: 0 },
@@ -52,6 +52,10 @@ export default {
 					"0%": { transform: "translateX(0)" },
 					"100%": { transform: "translateX(-50%)" },
 				},
+				"up-marquee": {
+					"0%": { transform: "translateY(0)" },
+					"100%": { transform: "translateY(-100%)" },
+				},
 				"scale-up": {
 					"0%": {
 						transform: "scaleY(0)",
@@ -61,10 +65,26 @@ export default {
 						transform: "scaleY(1)",
 						opacity: 1,
 					},
-
 				},
 			},
 		},
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		({ addUtilities }) =>
+			addUtilities(
+				{
+					".writing-mode-vertical-rl": {
+						"writing-mode": "vertical-rl",
+					},
+					".text-orientation-mixed": {
+						"text-orientation": "mixed",
+					},
+					".translate-y--19.8p": {
+						transform: "translateY(-19.8003%) translate3d(0px, 0px, 0px)",
+					},
+				},
+				["responsive"],
+			),
+	],
 };
