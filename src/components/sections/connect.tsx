@@ -18,7 +18,7 @@ const Connect = () => {
 					<div className="p-6 md:min-w-[576px] md:flex md:flex-col md:justify-center md:items-center">
 						<SectionHeader digits="005" textNum="five" />
 
-						<p className="mx-auto text-center text-[clamp(7rem,30vw,25rem)] leading-[2] font-caslon font-bold uppercase sm:flex">
+						<p className="mx-auto text-center text-[clamp(6rem,29vw,25rem)] leading-[2] font-caslon font-bold uppercase sm:flex">
 							{title.split("").map((char, index) => (
 								<span
 									key={index}
