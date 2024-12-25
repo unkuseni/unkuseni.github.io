@@ -56,6 +56,7 @@ const What: React.FC<WhatProps> = ({
 			<section
 				className='relative max-sm:pt-5 sm:flex flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)]'
 				ref={sectionRef as React.RefObject<HTMLElement>}
+				id="what"
 			>
 				<div className="p-6 md:min-w-[576px] md:flex md:flex-col md:justify-center md:items-center">
 					<SectionHeader digits="003" textNum="three" />

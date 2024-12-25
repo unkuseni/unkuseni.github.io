@@ -63,7 +63,7 @@ const Who = () => {
 				/>
 
 				<article className="p-6 max-sm:mt-28 md:flex md:gap-5">
-					<div className="md:self-start">
+					<div className="md:self-start md:mt-20">
 						<h2 className="uppercase text-xl font-bold">tinkerer</h2>
 
 						<p className="mt-10 leading-10 text-2xl max-w-3xl">

@@ -70,12 +70,12 @@ const Navbar: React.FC<NavbarProps> = ({
 									);
 								})}
 							</ul>
-							<button
+							<a
 								className="backdrop-blur-lg bg-[rgba(255,255,255,.05)] cursor-pointer p-6 rounded-[100px]"
-								type="button"
+								href="#connect"
 							>
 								<span className="uppercase text-lg font-semibold">connect</span>
-							</button>
+							</a>
 						</div>
 					</div>
 					<div
