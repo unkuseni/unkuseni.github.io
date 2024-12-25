@@ -62,9 +62,9 @@ const Navbar: React.FC<NavbarProps> = ({
 								{title}
 							</h2>
 							<ul className="flex max-md:hidden w-2/6 items-center justify-between uppercase font-bold text-xl ">
-								{navLinks.map(({ title, digits, textNum }) => {
+								{navLinks.map(({ title }) => {
 									return (
-										<li className="hover:backdrop-blur-lg hover:bg-[rgba(255,255,255,.05)] cursor-pointer hover:text-green-500 p-6 rounded-[100px] last:hidden">
+										<li className="hover:backdrop-blur-lg hover:bg-[rgba(255,255,255,.05)] cursor-pointer hover:text-green-500 p-6 rounded-[100px] last:hidden" key={title}>
 											<a href={`#${title}`}>{title}</a>
 										</li>
 									);
