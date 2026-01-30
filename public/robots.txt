@@ -1,0 +1,61 @@
+# robots.txt for unkuseni.xyz
+# Last updated: December 2024
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+# Sitemap location
+Sitemap: https://unkuseni.xyz/sitemap.xml
+
+# Crawl delay (optional, adjust based on server capacity)
+Crawl-delay: 2
+
+# Allow all major search engine bots
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Slurp
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: YandexBot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Block AI data scrapers (optional)
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: GPTBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: FacebookBot
+Disallow: /
+User-agent: Applebot
+Disallow: /
+
+# Host directive (optional, helps with duplicate content)
+Host: unkuseni.xyz
