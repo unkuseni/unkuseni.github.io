@@ -2,15 +2,15 @@ import SectionHeader from "./section-header";
 import { useInView } from "@/hooks/useInView";
 
 const Who = () => {
-  const [sectionRef, isInView] = useInView({
-    threshold: 0.05, // Trigger when 20% of element is visible
+  const [sectionRef, isInView] = useInView<HTMLElement>({
+    threshold: 0.05,
   });
 
   const title = "who";
   return (
     <section
-      className='relative max-sm:pt-5 sm:flex flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)]'
-      ref={sectionRef as React.RefObject<HTMLElement>}
+      className='md:snap-start relative max-sm:pt-5 sm:flex flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)]'
+      ref={sectionRef}
       id="who"
     >
       <div className="p-6 md:min-w-[576px] md:flex md:flex-col md:justify-center md:items-center md:flex-shrink-0">
@@ -39,7 +39,10 @@ const Who = () => {
         <h2 className="text-xl md:text-5xl font-bold uppercase md:tracking-wider">
           adeoye olaseni, chemist, software developer and tinkerer
         </h2>
-        <p className="font-editorial text-2xl md:text-5xl mt-5 leading-10">
+        <p
+          className={`font-editorial text-2xl md:text-5xl mt-5 leading-10 transition-opacity duration-700 ${isInView ? "opacity-100" : "opacity-0"
+            }`}
+        >
           "All my life, curiosity and taking things apart has helped me foster
           my creativity.
           <br />
@@ -55,9 +58,8 @@ const Who = () => {
       <img
         src="/seni.jpeg"
         alt="Portrait of Adeoye Olaseni - Full-stack developer and chemist"
-        className={
-          "max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out flex-shrink-0 bg-white"
-        }
+        className={`max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out flex-shrink-0 ${isInView ? "scale-100 opacity-100" : "scale-95 opacity-0"
+          }`}
         loading="lazy"
       />
 
@@ -65,7 +67,10 @@ const Who = () => {
         <div className="md:self-start md:mt-20">
           <h2 className="uppercase text-xl font-bold">tinkerer</h2>
 
-          <p className="mt-10 leading-10 text-2xl max-w-3xl">
+          <p
+            className={`mt-10 leading-10 text-2xl max-w-3xl transition-opacity duration-700 ${isInView ? "opacity-100" : "opacity-0"
+              }`}
+          >
             "Stay curious, stay foolish. In the intersection of chemistry and
             code,{" "}
             <span className="font-playfair italic md:text-3xl">
@@ -88,9 +93,8 @@ const Who = () => {
         <img
           src="/tink.jpg"
           alt="Adeoye Olaseni working on hardware projects as a tinkerer"
-          className={
-            "max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out bg-white flex-shrink-0 md:self-end"
-          }
+          className={`max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out flex-shrink-0 md:self-end ${isInView ? "scale-100 opacity-100" : "scale-95 opacity-0"
+            }`}
           loading="lazy"
         />
       </article>
@@ -98,7 +102,10 @@ const Who = () => {
       <article className="p-6 mt-28">
         <h2 className="uppercase text-xl font-bold">the chemist</h2>
 
-        <p className="mt-10 leading-10 text-2xl">
+        <p
+          className={`mt-10 leading-10 text-2xl transition-opacity duration-700 ${isInView ? "opacity-100" : "opacity-0"
+            }`}
+        >
           "With a degree in Chemistry, my passion lies in exploring the
           molecular foundations of the world around us.
           <br />
@@ -116,9 +123,8 @@ const Who = () => {
         <img
           src="/engine.jpg"
           alt="Chemistry laboratory equipment and molecular structures representing scientific background"
-          className={
-            "max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out bg-white flex-shrink-0"
-          }
+          className={`max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out flex-shrink-0 ${isInView ? "scale-100 opacity-100" : "scale-95 opacity-0"
+            }`}
           loading="lazy"
         />
       </article>

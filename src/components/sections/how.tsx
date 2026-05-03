@@ -3,15 +3,15 @@ import { useInView } from "@/hooks/useInView";
 import { Drawer, VerticalDrawer } from "../drawer/drawer";
 
 const How = () => {
-  const [sectionRef, isInView] = useInView({
+  const [sectionRef, isInView] = useInView<HTMLElement>({
     threshold: 0.1, // Trigger when 20% of element is visible
   });
 
   const title = "how";
   return (
     <section
-      className='relative max-sm:pt-5 sm:flex flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)] md:border-r border-r-white'
-      ref={sectionRef as React.RefObject<HTMLElement>}
+      className='md:snap-start relative max-sm:pt-5 sm:flex flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)] md:border-r border-r-white'
+      ref={sectionRef}
       id="how"
     >
       <div className="p-6 md:min-w-[576px] md:flex md:flex-col md:justify-center md:items-center">
@@ -51,7 +51,7 @@ const How = () => {
 
       <img
         src="/stack.jpg"
-        alt="stack of stones"
+        alt="A balanced stack of stones representing precision, patience, and careful methodology in software development"
         className={
           "max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out bg-green-700 flex-shrink-0"
         }

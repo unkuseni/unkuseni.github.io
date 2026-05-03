@@ -2,59 +2,40 @@ import SectionHeader from "./section-header";
 import { useInView } from "@/hooks/useInView";
 import Carousel from "../carousel/carousel";
 
-interface WhatProps {
-  worksOnDisplay?: {
-    title: string;
-    description: string;
-    image: string;
-    liveLink: string;
-    repoLink: string;
-  }[];
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  liveLink: string;
+  repoLink: string;
 }
+
+interface WhatProps {
+  worksOnDisplay?: Project[];
+}
+
+const DEFAULT_PROJECTS: Project[] = [
+  {
+    title: "Portfolio Website",
+    description:
+      "This very portfolio — a showcase of custom software craftsmanship built with React, TypeScript, and TanStack. Designed for performance and visual impact.",
+    image: "/port.jpeg",
+    liveLink: "https://unkuseni.xyz",
+    repoLink: "https://github.com/unkuseni/unkuseni.github.io",
+  },
+];
+
 const What: React.FC<WhatProps> = ({
-  worksOnDisplay = [
-    {
-      title: "pet project",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam mollitia deserunt eligendi perspiciatis, aliquid aliquam! Ullam ipsam impedit reiciendis sapiente.",
-      image: "https://picsum.photos/300/200",
-      liveLink: "https://unkuseni.me",
-      repoLink: "https://github.com/unkuseni",
-    },
-    {
-      title: "pet project",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam mollitia deserunt eligendi perspiciatis, aliquid aliquam! Ullam ipsam impedit reiciendis sapiente.",
-      image: "https://picsum.photos/300/200",
-      liveLink: "https://unkuseni.me",
-      repoLink: "https://github.com/unkuseni",
-    },
-    {
-      title: "pet project",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam mollitia deserunt eligendi perspiciatis, aliquid aliquam! Ullam ipsam impedit reiciendis sapiente.",
-      image: "https://picsum.photos/300/200",
-      liveLink: "https://unkuseni.me",
-      repoLink: "https://github.com/unkuseni",
-    },
-    {
-      title: "pet project",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam mollitia deserunt eligendi perspiciatis, aliquid aliquam! Ullam ipsam impedit reiciendis sapiente.",
-      image: "https://picsum.photos/300/200",
-      liveLink: "https://unkuseni.me",
-      repoLink: "https://github.com/unkuseni",
-    },
-  ],
+  worksOnDisplay = DEFAULT_PROJECTS,
 }) => {
-  const [sectionRef, isInView] = useInView({
-    threshold: 0.2, // Trigger when 20% of element is visible
+  const [sectionRef, isInView] = useInView<HTMLElement>({
+    threshold: 0.2,
   });
   const title = "what";
   return (
     <section
-      className='relative max-sm:pt-5 sm:flex flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)]'
-      ref={sectionRef as React.RefObject<HTMLElement>}
+      className='md:snap-start relative max-sm:pt-5 sm:flex flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)]'
+      ref={sectionRef}
       id="what"
     >
       <div className="p-6 md:min-w-[576px] md:flex md:flex-col md:justify-center md:items-center">
@@ -82,19 +63,14 @@ const What: React.FC<WhatProps> = ({
       <div className="md:self-center">
         <article className="p-6 md:w-[576px] md:flex md:flex-col md:items-center md:justify-center md:flex-shrink-0 md:relative md:gap-5">
           <h2 className="text-xl font-bold uppercase">
-            From Curiosity to Creation: Crafting Order from Chaos Through
-            Chemistry and Code
+            Crafting Digital Solutions Through Code
           </h2>
           <p className="font-editorial text-2xl mt-5 leading-10">
-            "All my life, curiosity and taking things apart has helped me foster
-            my creativity.
-            <br />
-            Software development is part of my ongoing journey of self-discovery
-            that helps me understand the famous phrase, ordo ab chao.
-            <br />
-            My passion for unraveling the mysteries of the universe drives me
-            forward. By combining my love for chemistry and coding, I aim to
-            create solutions that bring order to chaos."
+            I specialize in building custom web applications that solve real
+            problems. From concept to deployment, I focus on creating
+            intuitive, performant, and maintainable solutions. My approach
+            combines modern development practices with a deep understanding of
+            user needs, ensuring every project delivers measurable value.
           </p>
         </article>
 

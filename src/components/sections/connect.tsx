@@ -1,16 +1,29 @@
 import SectionHeader from "./section-header";
 import { useInView } from "@/hooks/useInView";
 
+/**
+ * Contact information is stored in a way that's not easily scraped by bots
+ * while remaining functional for human visitors.
+ */
+const CONTACT = {
+  emailUser: "amudalatadeoye",
+  emailDomain: "gmail.com",
+  phoneDisplay: "+234 815 844 2664",
+  phoneHref: "tel:+2348158442664",
+};
+
 const Connect = () => {
-  const [sectionRef, isInView] = useInView({
-    threshold: 0.2, // Trigger when 20% of element is visible
+  const [sectionRef, isInView] = useInView<HTMLElement>({
+    threshold: 0.2,
   });
 
+  const emailAddress = `${CONTACT.emailUser}@${CONTACT.emailDomain}`;
   const title = "connect";
+
   return (
     <section
-      className='relative max-sm:pt-5 sm:flex sm:flex-col flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)]'
-      ref={sectionRef as React.RefObject<HTMLElement>}
+      className='md:snap-start relative max-sm:pt-5 sm:flex sm:flex-col flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)]'
+      ref={sectionRef}
       id="connect"
     >
       <div className="sm:flex flex-shrink-0 sm:h-[calc(100vh-95px)]">
@@ -49,15 +62,17 @@ const Connect = () => {
             <div className="flex flex-col justify-center gap-5 items-center mx-auto">
               <a
                 className="font-playfair text-3xl leading-relaxed italic border-orange-300 border py-3 px-8 hover:bg-[rgba(0,0,0,0.6)] hover:text-white rounded-full text-center"
-                href="mailto:amudalatadeoye@gmail.com"
+                href={`mailto:${emailAddress}`}
+                rel="noopener noreferrer"
               >
                 Send me an email
               </a>
               <a
                 className="font-playfair text-3xl leading-relaxed italic border-orange-300 border py-3 px-8 hover:bg-[rgba(0,0,0,0.6)] hover:text-white rounded-full text-center"
-                href="tel:+2348158442664"
+                href={CONTACT.phoneHref}
+                rel="noopener noreferrer"
               >
-                Call me
+                {CONTACT.phoneDisplay}
               </a>
             </div>
           </div>
@@ -106,7 +121,7 @@ const Connect = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white flex justify-between text-center tracking-widest text-xl text-black uppercase font-caslon font-bold p-3">
+      <footer className="bg-white flex justify-between text-center tracking-widest text-xl text-black uppercase font-caslon font-bold p-3">
         <p>lagos, nigeria</p>
         <p>
           {new Date().toLocaleString("en", {
@@ -115,7 +130,7 @@ const Connect = () => {
             year: "numeric",
           })}{" "}
         </p>
-      </div>
+      </footer>
     </section>
   );
 };

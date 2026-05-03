@@ -2,7 +2,7 @@ import SectionHeader from "./section-header";
 import { useInView } from "@/hooks/useInView";
 
 const Why = () => {
-  const [sectionRef, isInView] = useInView({
+  const [sectionRef, isInView] = useInView<HTMLElement>({
     threshold: 0.2, // Trigger when 20% of element is visible
   });
 
@@ -10,8 +10,8 @@ const Why = () => {
 
   return (
     <section
-      ref={sectionRef as React.RefObject<HTMLElement>}
-      className='relative max-sm:pt-5 sm:flex flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)]'
+      ref={sectionRef}
+      className='md:snap-start relative max-sm:pt-5 sm:flex flex-shrink-0 max-sm:bg-[url("/bkg.png")] bg-center bg-no-repeat bg-cover sm:h-[calc(100vh-73px)]'
       id="why"
     >
       <div className="p-6 md:order-2 md:min-w-[576px] md:flex md:flex-col md:justify-center md:items-center">
@@ -42,9 +42,8 @@ const Why = () => {
             transforming ideas into software solutions
           </h2>
           <p
-            className={`mt-5 leading-10 text-2xl md:text-3xl transition-opacity duration-700 ${
-              isInView ? "opacity-100" : "opacity-0"
-            }`}
+            className={`mt-5 leading-10 text-2xl md:text-3xl transition-opacity duration-700 ${isInView ? "opacity-100" : "opacity-0"
+              }`}
           >
             This portfolio showcases{" "}
             <span className="font-playfair italic">
@@ -57,9 +56,8 @@ const Why = () => {
         <img
           src="/why-2.jpg"
           alt="Software development process showing code transformation"
-          className={`mt-10 w-full h-auto max-w-full object-cover transform transition-transform duration-500 ease-out bg-green-700 md:order-1 md:relative left-2/3 ${
-            isInView ? "scale-[1]" : "scale-[0]"
-          }`}
+          className={`mt-10 w-full h-auto max-w-full object-cover transform transition-transform duration-500 ease-out bg-green-700 md:order-1 md:relative left-2/3 ${isInView ? "scale-[1]" : "scale-[0]"
+            }`}
           loading="lazy"
         />
       </article>
@@ -67,9 +65,8 @@ const Why = () => {
       <img
         src="/why-1.jpg"
         alt="Creative problem-solving and software development workspace"
-        className={`max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out bg-green-700 md:order-1 flex-shrink-0 ${
-          isInView ? "scale-[1]" : "scale-[0]"
-        }`}
+        className={`max-sm:mt-24 max-sm:mx-auto w-full sm:max-w-3xl h-auto object-cover transform transition-transform duration-500 ease-out bg-green-700 md:order-1 flex-shrink-0 ${isInView ? "scale-[1]" : "scale-[0]"
+          }`}
         loading="lazy"
       />
 
@@ -78,9 +75,8 @@ const Why = () => {
           a need to use leverage
         </h2>
         <p
-          className={`mt-10 leading-10 text-2xl md:text-3xl transition-opacity duration-700 ${
-            isInView ? "opacity-100" : "opacity-0"
-          }`}
+          className={`mt-10 leading-10 text-2xl md:text-3xl transition-opacity duration-700 ${isInView ? "opacity-100" : "opacity-0"
+            }`}
         >
           I believe that creative problem-solving and leveraging software
           solutions can empower growth in every project, regardless of
